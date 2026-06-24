@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ВайбЗмест</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header / Hero Section -->
+    <header class="hero" id="hero">
+      <nav class="navbar">
+        <!-- Убираем маленький логотип из навигации: оставляем только пункты меню и бургер -->
+        <button class="nav-toggle" aria-label="Меню">
+          &#9776;
+        </button>
+        <ul class="nav-links">
+          <li><a href="#benefits">Преимущества</a></li>
+          <li><a href="#process">Как мы работаем</a></li>
+          <li><a href="#formats">Форматы</a></li>
+          <li><a href="#course">Курс</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <!-- New hero layout: logo card and text side by side -->
+        <div class="hero-logo-card">
+          <!-- Логотип лежит в корне репозитория: logo.png -->
+          <img src="logo.png" alt="Логотип ВайбЗмест" class="hero-logo" />
+        </div>
+        <div class="hero-text">
+          <!-- Курсивная ценностная фраза вместо слогана про ИИ -->
+          <p class="eyebrow">Социально ответственный интеллектуальный белорусский бизнес</p>
+          <!-- Основные заголовки убираем, поскольку они дублируют логотип -->
+          <p>
+            Обучаем, консультируем и сопровождаем цифровую трансформацию рабочих
+            процессов. Помогаем командам внедрять ИИ в&nbsp;реальную деятельность
+            организации.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contacts" class="btn btn-primary">Обсудить задачу</a>
+            <!-- Ссылка на программу корпоративного курса ведет на отдельный сайт -->
+            <a href="https://pedfund.github.io/AI-PVNvna/" class="btn btn-outline" id="hero-course-link">Корпоративный курс</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Benefits Section -->
+    <section class="section benefits scroll-section" id="benefits">
+      <div class="container">
+        <h2 class="section-title">Чем мы полезны</h2>
+        <div class="cards-grid">
+          <div class="circle-card">
+            <h3>Повышаем производительность</h3>
+            <p>
+              Помогаем сотрудникам быстрее выполнять интеллектуальную работу.
+            </p>
+          </div>
+          <div class="circle-card">
+            <h3>Сохраняем знания организации</h3>
+            <p>
+              Превращаем опыт сотрудников в&nbsp;доступные базы знаний и
+              AI‑помощников.
+            </p>
+          </div>
+          <div class="circle-card">
+            <h3>Автоматизируем рутину</h3>
+            <p>
+              Сокращаем время на документы, поиск информации, отчеты и
+              коммуникации.
+            </p>
+          </div>
+          <div class="circle-card">
+            <h3>Сопровождаем изменения</h3>
+            <p>
+              Помогаем внедрять ИИ как рабочий инструмент организации.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process scroll-section" id="process">
+      <div class="container">
+        <h2 class="section-title">Как мы работаем</h2>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Диагностика</h3>
+            <p>Изучаем задачи и процессы организации.</p>
+          </div>
+          <div class="process-arrow">&rarr;</div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Обучение</h3>
+            <p>Показываем практические сценарии применения ИИ.</p>
+          </div>
+          <div class="process-arrow">&rarr;</div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Пилотный проект</h3>
+            <p>Запускаем первое рабочее решение.</p>
+          </div>
+          <div class="process-arrow">&rarr;</div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Масштабирование</h3>
+            <p>Распространяем успешный опыт на другие процессы.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formats Section -->
+    <section class="section formats scroll-section" id="formats">
+      <div class="container">
+        <h2 class="section-title">Форматы сотрудничества</h2>
+        <div class="cards-grid">
+          <div class="circle-card">
+            <h3>Корпоративное обучение</h3>
+            <p>Программы для руководителей и сотрудников.</p>
+          </div>
+          <div class="circle-card">
+            <h3>Консалтинг</h3>
+            <p>Поиск точек роста и возможностей применения ИИ.</p>
+          </div>
+          <div class="circle-card">
+            <h3>Проектное внедрение</h3>
+            <p>Создание и запуск AI‑ботов, ассистентов и автоматизированных процессов.</p>
+          </div>
+          <div class="circle-card">
+            <h3>Сопровождение команды</h3>
+            <p>Поддержка команды на этапе изменений.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Section -->
+    <section class="section course scroll-section" id="course">
+      <div class="container course-content">
+        <h2 class="section-title">Корпоративный курс по ИИ</h2>
+        <p>
+          Для большинства организаций цифровая трансформация начинается с
+          формирования общего языка и практических навыков работы с ИИ.
+        </p>
+        <a href="https://pedfund.github.io/AI-PVNvna/" class="btn btn-primary" id="course-link">Перейти к программе курса</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about scroll-section" id="about">
+      <div class="container">
+        <h2 class="section-title">О компании</h2>
+        <p>
+          ВайбЗмест – белорусская компания, помогающая организациям внедрять
+          искусственный интеллект через обучение, консалтинг и проектную
+          деятельность. Мы применяем методологический подход, ответственно
+          используем технологии и ориентируемся на реальные задачи
+          организаций.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="section contacts scroll-section" id="contacts">
+      <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <h3>Телефон</h3>
+            <p><a href="tel:+375297200700">+375 29 7‑200‑700</a></p>
+          </div>
+          <div class="contact-item">
+            <h3>Telegram</h3>
+            <p><a href="https://t.me/vibezmest" id="telegram-link">@vibezmest</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
