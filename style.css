@@ -8,8 +8,8 @@
   --color-light: #ffffff;
   --color-accent: #00b1b4;
   --color-accent-emerald: #00d9a6;
-  --color-background: #f4f7fa;
-  --color-card-bg: #ffffff;
+  --color-background: #f5f7f8;
+  --color-card-bg: #f5f7f8;
   --color-text-dark: #2e2e2e;
   --color-text-light: #f9f9f9;
   --spacing: 20px;
@@ -31,7 +31,8 @@ body {
   font-family: 'Arial', 'Helvetica', sans-serif;
   line-height: 1.6;
   background:
-    radial-gradient(circle at 80% 0%, rgba(0, 177, 180, 0.08), transparent 34%),
+    radial-gradient(circle at 80% 0%, rgba(0, 177, 180, 0.07), transparent 34%),
+    linear-gradient(180deg, rgba(9, 17, 19, 0.08) 0, transparent 260px),
     var(--color-background);
   color: var(--color-text-dark);
   overflow-x: hidden;
@@ -178,6 +179,10 @@ a:hover {
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 18%, black 82%, transparent 100%);
 }
 
+.hero::before {
+  box-shadow: inset 0 -150px 120px -95px var(--color-background);
+}
+
 .hero-content {
   position: relative;
 }
@@ -314,10 +319,13 @@ a:hover {
   padding: 96px 0;
   position: relative;
   scroll-margin-top: 96px;
+  background: transparent;
 }
 
 .benefits {
   padding-top: 112px;
+  background:
+    linear-gradient(180deg, rgba(7, 18, 20, 0.18) 0%, rgba(245, 247, 248, 0.98) 34%, var(--color-background) 100%);
 }
 
 .section-title {
@@ -338,22 +346,45 @@ a:hover {
 .circle-card,
 .process-step {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.88));
-  border: 1px solid rgba(0, 177, 180, 0.08);
-  box-shadow: 0 18px 55px rgba(17, 17, 17, 0.08);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 251, 252, 0.82));
+  border: 1px solid rgba(0, 177, 180, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.86),
+    inset 0 -16px 34px rgba(0, 177, 180, 0.025),
+    0 28px 70px rgba(14, 28, 34, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card::before,
+.circle-card::before,
+.process-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 22px;
+  right: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(0, 177, 180, 0.58), rgba(0, 217, 166, 0.5), transparent);
+  opacity: 0.72;
 }
 
 .card:hover,
 .circle-card:hover,
 .process-step:hover {
-  transform: translateY(-7px);
+  transform: translateY(-6px);
   border-color: rgba(0, 177, 180, 0.22);
-  box-shadow: 0 24px 70px rgba(0, 177, 180, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    inset 0 -16px 34px rgba(0, 177, 180, 0.04),
+    0 34px 86px rgba(14, 28, 34, 0.14),
+    0 0 34px rgba(0, 177, 180, 0.08);
 }
 
 .card {
-  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
   padding: 1.7rem;
 }
 
@@ -370,7 +401,9 @@ a:hover {
 }
 
 .circle-card {
-  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
   aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
@@ -404,7 +437,9 @@ a:hover {
 }
 
 .process-step {
-  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
   aspect-ratio: 1 / 1;
   padding: 2rem;
   display: flex;
@@ -484,7 +519,7 @@ a:hover {
 }
 
 .contacts {
-  background-color: var(--color-card-bg);
+  background-color: var(--color-background);
   color: var(--color-primary);
 }
 
@@ -498,16 +533,21 @@ a:hover {
 .contact-item {
   min-width: 220px;
   padding: 1.6rem 2rem;
-  border-radius: 24px;
-  background: #ffffff;
-  box-shadow: 0 18px 55px rgba(17, 17, 17, 0.08);
-  border: 1px solid rgba(0, 177, 180, 0.08);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 251, 252, 0.84));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.86),
+    0 28px 70px rgba(14, 28, 34, 0.1);
+  border: 1px solid rgba(0, 177, 180, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 24px 70px rgba(0, 177, 180, 0.14);
+  transform: translateY(-6px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.92),
+    0 34px 86px rgba(14, 28, 34, 0.14),
+    0 0 34px rgba(0, 177, 180, 0.08);
 }
 
 .contact-item h3 {
